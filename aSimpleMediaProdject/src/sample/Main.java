@@ -41,6 +41,11 @@ public class Main extends Application {
         window = primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
+
+                //
+        //IMAGEVIEWS//
+            //
+
         final ImageView blueOysterCultImageView = new ImageView();
         String blueOysterCultString = "/Users/amanti/Desktop/aSimpleMediaProdject/src/sample/media/" +
                 "blueOysterCult/blueOysterCult.png";
@@ -226,6 +231,9 @@ public class Main extends Application {
         Button curseOfTheHiddenMirrorButton = new Button();
         curseOfTheHiddenMirrorButton.setGraphic(curseOfTheHiddenMirrorImageView);
         curseOfTheHiddenMirrorButton.setOnAction(event -> window.setScene(curseOfTheHiddenMirrorScene));
+                //
+        //MAIN-MENU_GRIDPANE//
+            //
 
         GridPane gridPane = new GridPane();
         gridPane.add(blueOysterCultButton,1,1);
@@ -241,13 +249,17 @@ public class Main extends Application {
         gridPane.add(imaginosButton,2,4);
         gridPane.add(heavenForbidButton,3,4);
         gridPane.add(curseOfTheHiddenMirrorButton,2,5);
-
+                //
+        //PRIMARYSTAGE//
+            //
         primaryStage.setTitle("A Simple Media Player");
         ScrollPane scrollPane = new ScrollPane(gridPane);
         Scene scene = new Scene(scrollPane,1050,720);
         primaryStage.setScene(scene);
 
-
+                //
+        //MUSIC-FILES__ALBUM-MENU//
+            //
         String blueOysterCultMusicFile = "/Users/amanti/Desktop/aSimpleMediaProdject/src/sample/media/" +
                 "blueOysterCult/thenCameTheLastDaysOfMay.mp3";
         Media blueOysterCultSong = new Media(new File(blueOysterCultMusicFile).toURI().toString());
